@@ -1,0 +1,380 @@
+[
+  {
+    "cat": "Tortas",
+    "titulo": "Mousse de tres chocolates",
+    "desc": "Una torta suave y aireada compuesta por tres capas de mousse: chocolate blanco, chocolate con leche y chocolate amargo, que se funden en un contraste de dulzura e intensidad en cada bocado.",
+    "file": "Mousse de tres chocolates_.jpg"
+  },
+  {
+    "cat": "Tortas",
+    "titulo": "Torta de Pistachos con crema chantilly y choco blanco",
+    "desc": "Bizcochuelo de pistachos combinado con una crema chantilly ligera y toques de chocolate blanco, logrando un equilibrio delicado entre lo frutado y lo cremoso.",
+    "file": "Torta de Pistachos con crema chantilly y choco blanco_.jpg"
+  },
+  {
+    "cat": "Tortas",
+    "titulo": "Torta Matilda",
+    "desc": "Inspirada en el clásico postre de chocolate húmedo, combina capas intensas de bizcochuelo de choco intenso con un relleno generoso, ideal para los amantes del chocolate profundo.",
+    "file": "matilda.jpg"
+  },
+  {
+    "cat": "Tortas",
+    "titulo": "Cheesecake de Frutos rojos",
+    "desc": "Base crocante de galletitas, cubierta con una cremosa mezcla de queso y coronada con una colorida y ácida salsa de frutos rojos.",
+    "file": "Cheesecake de Frutos rojos.jpg"
+  },
+  {
+    "cat": "Tortas",
+    "titulo": "Tiramisú",
+    "desc": "El clásico postre italiano con capas de vainillas embebidas en café, intercaladas con una suave crema de mascarpone y un toque final de cacao.",
+    "file": "Tiramisu_.jpg"
+  },
+  {
+    "cat": "Tortas",
+    "titulo": "Tiramisú",
+    "desc": "El clásico postre italiano con capas de vainillas embebidas en café, intercaladas con una suave crema de mascarpone y un toque final de cacao.",
+    "file": "torta tiramisu.jpg"
+  },
+  {
+    "cat": "Tortas",
+    "titulo": "Marquise de chocolate c/ dulce de leche y crema chantilly y frutos rojos",
+    "desc": "Una torta densa de chocolate que combina dulce de leche, crema chantilly liviana y frutos rojos frescos, logrando un postre de contrastes intensos.",
+    "file": "Marquise de chocolate c_ dulce de leche y crema chantilli y frutos rojos.jpg"
+  },
+  {
+    "cat": "Tortas",
+    "titulo": "Torta chajá redonda (16 cm)",
+    "desc": "La misma combinación tradicional de bizcochuelo, dulce de leche, merengues y crema chantilly con duraznos, cubierta de merenguitos, en formato redondo más compacto.",
+    "file": "Torta chaja redonda (16 cm).jpg"
+  },
+  {
+    "cat": "Tortas",
+    "titulo": "Chocotorta",
+    "desc": "El clásico argentino reinventado: galletitas de chocolate embebidas en café, combinadas con una mezcla de dulce de leche y queso crema, en formato redondo.",
+    "file": "Chocotorta.jpg"
+  },
+  {
+    "cat": "Tortas",
+    "titulo": "Red velvet 18 cm",
+    "desc": "Bizcochuelo aterciopelado de color rojo intenso y sutil sabor a cacao, relleno y cubierto con un suave frosting de queso crema.",
+    "file": "Red velvet 18 cm.jpg"
+  },
+  {
+    "cat": "Tortas",
+    "titulo": "Rogel (20 cm)",
+    "desc": "Finas capas de masa intercaladas con dulce de leche, coronadas con un merengue italiano.",
+    "file": "Rogel (20 cm).jpg"
+  },
+  {
+    "cat": "Tortas",
+    "titulo": "Brownie con dulce de leche y merengue",
+    "desc": "Una base húmeda de brownie de chocolate combinada con dulce de leche y merengue italiano, para los que buscan una explosión de sabores dulces.",
+    "file": "torta brownie.jpg"
+  },
+  {
+    "cat": "Tortas",
+    "titulo": "Selva Negra",
+    "desc": "Capas de bizcocho de chocolate con crema y cerezas al marrasquino.",
+    "file": "SELVA NEGRA.jpg"
+  },
+  {
+    "cat": "Tortas",
+    "titulo": "Merengada de nuez c/ ddl, crema chantilly y frutos rojos",
+    "desc": "Base merengada de nuez, decorada con dulce de leche, crema chantilly y frutos rojos que aportan frescura al conjunto.",
+    "file": "Merengada de nuez c_ ddl, crema chantilly y frutos rojos.jpg"
+  },
+  {
+    "cat": "Tortas",
+    "titulo": "Torta Oreo",
+    "desc": "Bizcochuelo de chocolate con trozos de galletitas Oreo y una cremosa cobertura, para los amantes de lo crocante.",
+    "file": "torta oreo circular.jpg"
+  },
+  {
+    "cat": "Tortas",
+    "titulo": "Torta tres leches",
+    "desc": "Bizcochuelo embebido en tres leches, coronado con una liviana crema chantilly.",
+    "file": "torta tres leches.jpg"
+  },
+  {
+    "cat": "Tortas",
+    "titulo": "Arrollado de chocolate",
+    "desc": "Un enrollado de bizcochuelo de chocolate relleno de dulce de leche y crema, cortado en finas rodajas.",
+    "file": "arollado de chocolate.jpg"
+  },
+  {
+    "cat": "Tartas",
+    "titulo": "Ricota",
+    "desc": "Tarta clásica de ricota, suave y ligeramente dulce, con una textura cremosa sobre base de masa horneada.",
+    "file": "Tarta de Ricota.jpg"
+  },
+  {
+    "cat": "Tartas",
+    "titulo": "Coco y dulce de leche",
+    "desc": "Combinación entre el coco rallado y el dulce de leche, sobre una base crocante.",
+    "file": "Coco y dulce de leche.jpg"
+  },
+  {
+    "cat": "Tartas",
+    "titulo": "Lemon Pie",
+    "desc": "Base de masa crocante con un relleno cítrico de limón, cubierta con un merengue suave y dorado.",
+    "file": "torta lemon pie.jpg"
+  },
+  {
+    "cat": "Tartas",
+    "titulo": "Frutillas",
+    "desc": "Tarta con una base de masa y relleno cremoso de pastelera, coronada con frutillas frescas de temporada.",
+    "file": "torta de frutilla circular.jpg"
+  },
+  {
+    "cat": "Tartas",
+    "titulo": "Crumble de manzana y peras",
+    "desc": "Base de masa con una capa de manzanas y peras cocidas, cubiertas por un crumble crocante y dorado.",
+    "file": "Tarta de Crumble de manzana y peras.jpg"
+  },
+  {
+    "cat": "Tartas",
+    "titulo": "Pasta Frola",
+    "desc": "El clásico dulce de membrillo o batata sobre una base entrelazada de masa tierna, horneada hasta dorar.",
+    "file": "pastafrola circular.jpg"
+  },
+  {
+    "cat": "Tartas",
+    "titulo": "Pasta Frola",
+    "desc": "El clásico dulce de membrillo o batata sobre una base entrelazada de masa tierna, horneada hasta dorar.",
+    "file": "pastafrola circular(1).jpg"
+  },
+  {
+    "cat": "Tartas",
+    "titulo": "Tarta Banoffee",
+    "desc": "Base de masa con plátanos, dulce de leche y una suave crema chantilly, inspirada en el clásico banoffee.",
+    "file": "tarta banofi.jpg"
+  },
+  {
+    "cat": "Box Celebración",
+    "titulo": "Box con 36 mini bocados",
+    "desc": "Una selección variada de mini postres perfecta para compartir en celebraciones: 12 brownies, 12 lemon pie y 12 alfajorcitos en un solo box.",
+    "file": "box celebracion.jpg"
+  },
+  {
+    "cat": "Cuadrados 8x8 cm",
+    "titulo": "Cuadrado de Brownie",
+    "desc": "Un clásico cuadrado de chocolate intenso, húmedo por dentro y con una ligera costra crocante.",
+    "file": "cuadrado de brownie.jpg"
+  },
+  {
+    "cat": "Cuadrados 8x8 cm",
+    "titulo": "Cuadrado Coco y ddl",
+    "desc": "Cuadrado dulce que combina coco rallado y dulce de leche en una textura suave y compacta.",
+    "file": "cuadrado coco y ddl.jpg"
+  },
+  {
+    "cat": "Cuadrados 8x8 cm",
+    "titulo": "Cuadrado Crumble de manzana y peras",
+    "desc": "Formato individual del crumble de manzana y pera, con su característica cobertura crocante.",
+    "file": "Cuadrado de Crumble de manzana.jpg"
+  },
+  {
+    "cat": "Cuadrados 8x8 cm",
+    "titulo": "Cuadrado de Limón",
+    "desc": "Un cuadrado fresco y cítrico, con el sabor característico del limón en formato individual.",
+    "file": "cuadrados de lemon pie.jpg"
+  },
+  {
+    "cat": "Cuadrados 8x8 cm",
+    "titulo": "Cuadrado de Pasta Frola",
+    "desc": "Versión en porción individual de la clásica pasta frola, con relleno de dulce de membrillo o batata.",
+    "file": "cuadrado de pastafrola.jpg"
+  },
+  {
+    "cat": "Cuadrados 8x8 cm",
+    "titulo": "Cuadrado de Brownie y ddl",
+    "desc": "El clásico cuadrado de brownie de chocolate intenso, potenciado con dulce de leche, húmedo por dentro y con una ligera costra crocante.",
+    "file": "Cuadrado de Brownie y ddl.jpg"
+  },
+  {
+    "cat": "Minicakes",
+    "titulo": "Lemon Pie individual",
+    "desc": "Versión individual del clásico lemon pie, con su base crocante, relleno cítrico y merengue italiano.",
+    "file": "tarteleta de lemon pie.jpg"
+  },
+  {
+    "cat": "Minicakes",
+    "titulo": "Torta Cabsha",
+    "desc": "Base de masa con relleno de dulce de leche, cubierta con ganache de chocolate y decoración de copos de dulce de leche.",
+    "file": "Tarteleta Cavsha.jpg"
+  },
+  {
+    "cat": "Minicakes",
+    "titulo": "Lingote Key Lime Pie",
+    "desc": "Base crocante de galletitas de vainilla, cubierta con una suave crema de limas y crema chantilly.",
+    "file": "lingote de key lime pie.jpg"
+  },
+  {
+    "cat": "Minicakes",
+    "titulo": "Lingote Brownie",
+    "desc": "El tradicional brownie de chocolate potenciado con dulce de leche y crema chantilly.",
+    "file": "Lingote de Brownie con dulce de leche y merengue.jpg"
+  },
+  {
+    "cat": "Minicakes",
+    "titulo": "Bandeja de lingotes (4 sabores)",
+    "desc": "Bandeja de lingotes de 22x6 cm con 4 sabores intensos: brownie, key lime pie, cheesecake de frutos rojos y tiramisú.",
+    "file": "lingotes.jpg"
+  },
+  {
+    "cat": "Minicakes",
+    "titulo": "Bandeja de lingotes (4 sabores)",
+    "desc": "Bandeja de lingotes de 22x6 cm con 4 sabores intensos: brownie, key lime pie, cheesecake de frutos rojos y tiramisú.",
+    "file": "IMG-20260620-WA0036.jpg"
+  },
+  {
+    "cat": "Minicakes",
+    "titulo": "Lingote de Chajá",
+    "desc": "Capas de merengue, dulce de leche y crema chantilly con un toque de durazno, en formato individual.",
+    "file": "lingote de chaja.jpg"
+  },
+  {
+    "cat": "Minicakes",
+    "titulo": "Tarteleta de Frutillas",
+    "desc": "Versión individual de la tarta de frutillas, con base de masa, relleno cremoso de pastelera y frutillas frescas de temporada.",
+    "file": "Tarteleta de frutillas.jpg"
+  },
+  {
+    "cat": "Alfajores",
+    "titulo": "Bañados con choco y ddl",
+    "desc": "Alfajores clásicos rellenos de dulce de leche y bañados en una capa de chocolate.",
+    "file": "alfajores de choco.jpg"
+  },
+  {
+    "cat": "Alfajores",
+    "titulo": "Coco y ddl",
+    "desc": "Alfajores de masa de coco, rellenos de dulce de leche.",
+    "file": "alfajores coco y ddl.jpg"
+  },
+  {
+    "cat": "Alfajores",
+    "titulo": "Maicena",
+    "desc": "Los tradicionales alfajores de maicena, suaves y rellenos de dulce de leche.",
+    "file": "alfajor de maicena.jpg"
+  },
+  {
+    "cat": "Alfajores",
+    "titulo": "Tipo Capitán del Espacio",
+    "desc": "Una versión inspirada en el famoso alfajor espacial, con su combinación característica de sabores.",
+    "file": "alfajor capitan del espacio.jpg"
+  },
+  {
+    "cat": "Alfajores",
+    "titulo": "Nuez y glaseado",
+    "desc": "Alfajores que combinan el crocante de la nuez con un delicado glaseado, rellenos de dulce de leche.",
+    "file": "alfajor de nuez y glaseado.jpg"
+  },
+  {
+    "cat": "Alfajores",
+    "titulo": "Alfajorcitos de masa sable",
+    "desc": "Pequeños alfajores de delicada masa sable rellenos de dulce de leche, protagonistas de nuestro box de celebración.",
+    "file": "alfajorcitos masa sable.jpg"
+  },
+  {
+    "cat": "Cookies",
+    "titulo": "American Cookies",
+    "desc": "Galletas de estilo americano, grandes y con trocitos de chocolate en cada bocado.",
+    "file": "american cookies.jpg"
+  },
+  {
+    "cat": "Cookies",
+    "titulo": "Cookie Red Velvet",
+    "desc": "Una galleta inspirada en el clásico red velvet, con su color característico y sutil sabor a cacao.",
+    "file": "galles red velvet.jpg"
+  },
+  {
+    "cat": "Cookies",
+    "titulo": "Pepas x 100 gr",
+    "desc": "Galletitas rellenas de dulce de membrillo.",
+    "file": "pepas.jpg"
+  },
+  {
+    "cat": "Cookies",
+    "titulo": "Galletas de queso x 4",
+    "desc": "Galletas saladas con sabor a queso, crocantes.",
+    "file": "galles de queso.jpg"
+  },
+  {
+    "cat": "Cookies",
+    "titulo": "Masitas secas x 250 gr",
+    "desc": "Una selección de masitas secas variadas de masa sable, presentadas en formato de 250 gramos.",
+    "file": "masitas secas.jpg"
+  },
+  {
+    "cat": "Panificados",
+    "titulo": "Pan de molde multisemillas",
+    "desc": "Un pan de molde nutritivo con una mezcla de semillas que aportan textura y sabor.",
+    "file": "pan de semilla.jpg"
+  },
+  {
+    "cat": "Panificados",
+    "titulo": "Pan de molde blanco",
+    "desc": "El clásico pan de molde blanco, suave y versátil para el día a día.",
+    "file": "pan blanco en molde.jpg"
+  },
+  {
+    "cat": "Panificados",
+    "titulo": "Pancitos x 6 unidades",
+    "desc": "Pancitos individuales, tiernos por dentro, presentados en pack de 6 unidades.",
+    "file": "Pancitos x6.jpg"
+  },
+  {
+    "cat": "Panificados",
+    "titulo": "Chipa x 250 gramos",
+    "desc": "El tradicional chipa, elaborado con almidón de mandioca y queso, con su textura característica elástica y suave.",
+    "file": "chipa.jpg"
+  },
+  {
+    "cat": "Panificados",
+    "titulo": "Pan dulce x 250 gramos",
+    "desc": "Pan dulce tradicional en formato reducido de 250 gramos.",
+    "file": "pan dulce glaseado.jpg"
+  },
+  {
+    "cat": "Panificados",
+    "titulo": "Rosca",
+    "desc": "La clásica rosca dulce con crema pastelera, ideal para compartir en cualquier ocasión especial.",
+    "file": "rosca de reyes.jpg"
+  },
+  {
+    "cat": "Panificados",
+    "titulo": "Rosca",
+    "desc": "La clásica rosca dulce con crema pastelera, ideal para compartir en cualquier ocasión especial.",
+    "file": "rosca de reyes(1).jpg"
+  },
+  {
+    "cat": "Panificados",
+    "titulo": "Budín de chocolate",
+    "desc": "Budín húmedo de chocolate, tierno y aromático, perfecto para acompañar el café de la tarde.",
+    "file": "budin de chocolate.jpg"
+  },
+  {
+    "cat": "Facturas",
+    "titulo": "Tortitas negras x 6 unidades",
+    "desc": "Facturas dulces bañadas con azúcar negra, en pack de 6 unidades.",
+    "file": "tortitas negras.jpg"
+  },
+  {
+    "cat": "Facturas",
+    "titulo": "Factura tipo pan de leche x 6",
+    "desc": "Facturas suaves tipo pan de leche, rellenas a elección con crema pastelera o dulce de leche, en pack de 6 unidades.",
+    "file": "pan de leche crema pastelera y ddl.jpg"
+  },
+  {
+    "cat": "Facturas",
+    "titulo": "Medialunas x 6",
+    "desc": "Las clásicas medialunas, tiernas y ligeramente dulces, presentadas en pack de 6 unidades.",
+    "file": "medialunas.jpg"
+  },
+  {
+    "cat": "Facturas",
+    "titulo": "Macarons",
+    "desc": "Tapitas de almendra rellenas de mousse.",
+    "file": "macarons.jpg"
+  }
+]
