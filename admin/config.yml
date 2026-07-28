@@ -44,5 +44,6 @@ collections:
                 name: "file"
                 widget: "image"
 media_library:
-  config:
-    max_file_size: 15000000
+    name: default
+    config:
+          max_file_size: 15000000
