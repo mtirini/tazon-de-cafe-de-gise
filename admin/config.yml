@@ -43,7 +43,3 @@ collections:
               - label: "Foto"
                 name: "file"
                 widget: "image"
-media_library:
-    name: default
-    config:
-          max_file_size: 15000000
