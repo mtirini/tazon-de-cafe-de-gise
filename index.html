@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel privado — Tazón de Café</title>
+  <meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+  <!-- Widget de Netlify Identity: maneja el login. Sin cuenta invitada, no se puede entrar. -->
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <!-- Sveltia CMS: panel de edición (título, descripción, categoría y foto de cada producto) -->
+  <script src="https://unpkg.com/@sveltia/cms/dist/sveltia-cms.js" type="module"></script>
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.open();
+        }
+      });
+    }
+  </script>
+</body>
+</html>

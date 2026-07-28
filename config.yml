@@ -1,0 +1,48 @@
+backend:
+  name: git-gateway
+  branch: main
+
+locale: "es"
+
+media_folder: ""
+public_folder: "/"
+
+collections:
+  - name: "productos"
+    label: "Productos"
+    label_singular: "Producto"
+    files:
+      - name: "catalogo"
+        label: "Catálogo de productos"
+        file: "productos.json"
+        fields:
+          - label: "Productos"
+            name: "productos"
+            widget: "list"
+            summary: "{{fields.titulo}} — {{fields.cat}}"
+            fields:
+              - label: "Categoría"
+                name: "cat"
+                widget: "select"
+                options:
+                  - "Tortas"
+                  - "Tartas"
+                  - "Box Celebración"
+                  - "Cuadrados 8x8 cm"
+                  - "Minicakes"
+                  - "Alfajores"
+                  - "Cookies"
+                  - "Panificados"
+                  - "Facturas"
+              - label: "Título"
+                name: "titulo"
+                widget: "string"
+              - label: "Descripción"
+                name: "desc"
+                widget: "text"
+              - label: "Foto"
+                name: "file"
+                widget: "image"
+                media_library:
+                  config:
+                    max_file_size: 15000000
