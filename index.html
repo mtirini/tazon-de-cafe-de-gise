@@ -1,24 +1,488 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Panel privado — Tazón de Café</title>
-  <meta name="robots" content="noindex, nofollow">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tazón de Café — Repostería artesanal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Alex+Brush&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --crema:#fbf4ea;
+    --crema-osc:#f3e6d3;
+    --marron:#4a2c1f;
+    --marron-suave:#6b4226;
+    --dorado:#b8874f;
+    --dorado-claro:#d9b878;
+    --texto:#3a2b22;
+    --sombra: 0 10px 30px rgba(74,44,31,.12);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:'Cormorant Garamond', serif;
+    background:
+      radial-gradient(circle at 15% 8%, rgba(184,135,79,.08), transparent 40%),
+      radial-gradient(circle at 90% 25%, rgba(184,135,79,.06), transparent 35%),
+      var(--crema);
+    color:var(--texto);
+    font-size:19px;
+    line-height:1.5;
+  }
+  h1,h2,h3,h4{font-family:'Playfair Display', serif; color:var(--marron); font-weight:600;}
+  .script{font-family:'Alex Brush', cursive; font-weight:400;}
+
+  /* Flourish divider */
+  .flourish{display:flex;align-items:center;justify-content:center;gap:14px;margin:6px auto 8px;max-width:340px;color:var(--dorado);}
+  .flourish .line{flex:1;height:1px;background:linear-gradient(90deg, transparent, var(--dorado-claro), transparent);}
+  .flourish svg{width:18px;height:18px;flex:none;}
+
+  /* Header */
+  header{
+    position:relative;
+    text-align:center;
+    padding:64px 20px 46px;
+    background:linear-gradient(180deg, #fffaf2, transparent);
+    overflow:hidden;
+  }
+  header .kicker{
+    letter-spacing:4px;text-transform:uppercase;font-size:.72em;color:var(--dorado);font-family:'Cormorant Garamond',serif;font-weight:600;
+  }
+  header h1{
+    font-size:3.6em;margin:10px 0 4px;line-height:1;
+  }
+  header h1 .script{font-size:1.15em; color:var(--dorado);}
+  header p.tagline{
+    font-style:italic;color:var(--marron-suave);font-size:1.25em;margin:10px auto 0;max-width:520px;
+  }
+  header .cup{position:absolute;font-size:2.4em;opacity:.14;color:var(--marron);}
+  header .cup.c1{top:18px;left:6%;transform:rotate(-12deg);}
+  header .cup.c2{bottom:10px;right:7%;transform:rotate(10deg);}
+
+  .intro{max-width:680px;margin:0 auto 10px;padding:0 24px;text-align:center;color:var(--marron-suave);font-size:1.08em;}
+
+  /* Featured section */
+  .featured-wrap{max-width:1180px;margin:50px auto 10px;padding:0 24px;}
+  .featured-head{text-align:center;margin-bottom:34px;}
+  .featured-head h2{font-size:2em;margin:0 0 6px;}
+  .featured-head .note{font-size:.92em;font-style:italic;color:var(--dorado);}
+
+  .cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+    gap:30px;
+  }
+  .card{
+    background:#fffefb;
+    border-radius:18px;
+    box-shadow:var(--sombra);
+    overflow:visible;
+    border:1px solid rgba(184,135,79,.15);
+    opacity:0;
+    transform:translateY(14px);
+    animation:riseIn .6s ease forwards;
+    position:relative;
+    z-index:1;
+  }
+  .card:hover{ z-index:6; }
+  @keyframes riseIn{ to{ opacity:1; transform:translateY(0);} }
+  .card .imgbox{
+    width:100%;aspect-ratio:4/3;
+    background:var(--crema-osc);
+    overflow:visible;position:relative;
+    border-radius:18px 18px 0 0;
+  }
+  .card .imgbox img{
+    position:absolute;top:0;left:0;width:100%;height:100%;
+    object-fit:cover;display:block;
+    border-radius:18px 18px 0 0;
+    transform:translate(0,0);
+    transition:top .4s ease, left .4s ease, width .4s ease, height .4s ease, transform .4s ease, box-shadow .4s ease, border-radius .4s ease;
+  }
+  .card:hover .imgbox img{
+    top:50%;left:50%;width:270px;height:270px;
+    transform:translate(-50%,-50%);
+    object-fit:cover;
+    border-radius:16px;
+    box-shadow:0 25px 55px rgba(74,44,31,.4);
+    border:1px solid rgba(184,135,79,.25);
+    z-index:10;
+  }
+  .card .imgbox .placeholder{
+    position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+    color:var(--dorado);font-size:.8em;text-align:center;padding:10px;
+  }
+  .card .info{padding:20px 22px 24px;}
+  .card .cat{
+    font-size:.68em;text-transform:uppercase;letter-spacing:1.5px;color:var(--dorado);font-family:'Cormorant Garamond',serif;font-weight:600;
+  }
+  .card h3{margin:6px 0 8px;font-size:1.28em;line-height:1.2;}
+  .card p{margin:0;font-size:.95em;line-height:1.5;color:var(--texto);}
+
+  /* CTA */
+  .cta-wrap{text-align:center;margin:52px 0 10px;display:flex;flex-wrap:wrap;justify-content:center;gap:16px;}
+  .cta-btn.alt{background:linear-gradient(135deg, var(--dorado), var(--dorado-claro));color:var(--marron);}
+  .cta-btn{
+    display:inline-block;
+    font-family:'Playfair Display', serif;
+    font-size:1.05em;
+    letter-spacing:.5px;
+    color:var(--crema);
+    background:linear-gradient(135deg, var(--marron), var(--marron-suave));
+    padding:14px 34px;
+    border-radius:40px;
+    text-decoration:none;
+    box-shadow:0 8px 20px rgba(74,44,31,.25);
+    cursor:pointer;
+    border:none;
+    transition:transform .2s ease, box-shadow .2s ease;
+  }
+  .cta-btn:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(74,44,31,.32);}
+
+  /* Full catalog */
+  .catalogo{max-width:1240px;margin:20px auto 0;padding:0 24px;}
+  .catalogo-inner{display:none;}
+  .catalogo-inner.open{display:block;animation:fadeUp .5s ease;}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(10px);} to{opacity:1;transform:translateY(0);}}
+  .catalogo h2{text-align:center;font-size:1.9em;margin-bottom:2px;}
+  .catalogo .sub{text-align:center;color:var(--dorado);font-size:.9em;font-style:italic;margin-bottom:36px;}
+
+  .cat-section{margin-bottom:44px;}
+  .cat-section h3{
+    font-size:1.35em;margin:0 0 18px;padding-bottom:8px;
+    border-bottom:1px solid rgba(184,135,79,.3);
+    display:flex;align-items:center;gap:10px;
+  }
+  .cat-section h3::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--dorado);display:inline-block;}
+
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:20px;}
+  .mini{background:#fffefb;border-radius:12px;box-shadow:0 4px 14px rgba(74,44,31,.08);overflow:visible;font-size:.9em;border:1px solid rgba(184,135,79,.12);position:relative;z-index:1;}
+  .mini:hover{ z-index:6; }
+  .mini .imgbox{aspect-ratio:4/3;background:var(--crema-osc);overflow:visible;position:relative;border-radius:12px 12px 0 0;}
+  .mini .imgbox img{
+    position:absolute;top:0;left:0;width:100%;height:100%;
+    object-fit:cover;display:block;
+    border-radius:12px 12px 0 0;
+    transform:translate(0,0);
+    transition:top .4s ease, left .4s ease, width .4s ease, height .4s ease, transform .4s ease, box-shadow .4s ease, border-radius .4s ease;
+  }
+  .mini:hover .imgbox img{
+    top:50%;left:50%;width:230px;height:230px;
+    transform:translate(-50%,-50%);
+    object-fit:cover;
+    border-radius:12px;
+    box-shadow:0 20px 45px rgba(74,44,31,.35);
+    border:1px solid rgba(184,135,79,.25);
+    z-index:10;
+  }
+  .mini .imgbox .placeholder{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:var(--dorado);font-size:.75em;text-align:center;padding:6px;}
+  .mini .info{padding:12px 14px 16px;}
+  .mini h4{margin:0 0 5px;font-size:1.05em;color:var(--marron);font-family:'Playfair Display',serif;font-weight:600;}
+  .mini p{margin:0;line-height:1.4;color:var(--texto);}
+
+  footer{
+    text-align:center;padding:50px 24px 40px;color:var(--marron-suave);margin-top:40px;
+    background:linear-gradient(0deg, #fffaf2, transparent);
+  }
+  footer .script{font-size:1.6em;display:block;margin-bottom:6px;color:var(--dorado);}
+  footer p{margin:4px 0;font-size:.95em;}
+  footer .small{font-size:.78em;color:var(--dorado);opacity:.8;margin-top:14px;}
+  footer a{color:var(--dorado);text-decoration:none;font-weight:600;}
+  footer a:hover{text-decoration:underline;}
+
+  /* Nav */
+  nav.sitenav{
+    display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:10px 30px;
+    padding:0 20px 30px;font-family:'Cormorant Garamond',serif;
+  }
+  nav.sitenav a{
+    color:var(--marron-suave);text-decoration:none;font-size:.82em;
+    letter-spacing:1.6px;text-transform:uppercase;font-weight:600;
+    padding-bottom:3px;border-bottom:1px solid transparent;
+    transition:color .2s ease, border-color .2s ease;
+  }
+  nav.sitenav a:hover{color:var(--dorado);border-color:var(--dorado-claro);}
+  nav.sitenav a.pedido{
+    color:var(--crema);background:linear-gradient(135deg, var(--marron), var(--marron-suave));
+    padding:7px 20px;border-radius:30px;letter-spacing:1px;border-bottom:none;
+    box-shadow:0 6px 16px rgba(74,44,31,.2);
+  }
+  nav.sitenav a.pedido:hover{opacity:.9;color:var(--crema);}
+
+  /* Conóceme */
+  .story-wrap{max-width:720px;margin:74px auto 10px;padding:0 24px;text-align:center;}
+  .story-wrap h2{font-size:2em;margin:0 0 6px;}
+  .story-wrap .hola{font-size:1.9em;margin:6px 0 16px;color:var(--dorado);}
+  .story-wrap p{margin:0 0 16px;color:var(--texto);text-align:left;font-size:1.06em;line-height:1.55;}
+  .story-wrap .firma{margin-top:10px;font-size:1.7em;color:var(--dorado);text-align:center;}
+
+  /* Take Away */
+  .take-wrap{max-width:920px;margin:74px auto 10px;padding:0 24px;text-align:center;}
+  .take-wrap h2{font-size:2em;margin:0 0 6px;}
+  .take-wrap .note{font-size:.92em;font-style:italic;color:var(--dorado);margin:0 0 10px;}
+  .take-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:30px;align-items:stretch;}
+  .take-info{background:#fffefb;border-radius:18px;box-shadow:var(--sombra);border:1px solid rgba(184,135,79,.15);padding:30px 28px;text-align:left;}
+  .take-info p{margin:0 0 18px;font-size:1.05em;}
+  .take-info p:last-child{margin-bottom:0;}
+  .take-info .addr{font-style:italic;color:var(--marron-suave);}
+  .mapa{border-radius:18px;overflow:hidden;box-shadow:var(--sombra);border:1px solid rgba(184,135,79,.15);min-height:240px;}
+  .mapa iframe{width:100%;height:100%;min-height:240px;border:0;display:block;}
+  @media (max-width:680px){ .take-grid{grid-template-columns:1fr;} }
+
+  @media (max-width:520px){
+    header h1{font-size:2.6em;}
+    body{font-size:17px;}
+  }
+</style>
 </head>
 <body>
-  <!-- Widget de Netlify Identity: maneja el login. Sin cuenta invitada, no se puede entrar. -->
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-  <!-- Sveltia CMS: panel de edición (título, descripción, categoría y foto de cada producto) -->
-  <script src="https://unpkg.com/@sveltia/cms/dist/sveltia-cms.js" type="module"></script>
-  <script>
-    if (window.netlifyIdentity) {
-      window.netlifyIdentity.on("init", user => {
-        if (!user) {
-          window.netlifyIdentity.open();
-        }
-      });
-    }
-  </script>
+
+<header id="inicio">
+  <span class="cup c1">☕</span>
+  <span class="cup c2">☕</span>
+  <div class="kicker">Repostería artesanal · 100% Gluten Free</div>
+  <h1>Tazón <span class="script">de</span> Café</h1>
+  <p class="tagline">Tortas, tartas y dulces hechos a mano, con la misma calidez de una taza de café compartida.</p>
+</header>
+
+<nav class="sitenav">
+  <a href="#inicio">Inicio</a>
+  <a href="#pasteleria">Nuestra pastelería</a>
+  <a href="#take-away">Take away</a>
+  <a href="#conoceme">Conóceme</a>
+  <a class="pedido" href="https://wa.me/5491160520578?text=Hola!%20Quiero%20hacer%20un%20pedido" target="_blank" rel="noopener">Pedidos</a>
+</nav>
+
+<div class="flourish">
+  <span class="line"></span>
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 2 L14 9 L21 9 L15 13 L17 21 L12 16 L7 21 L9 13 L3 9 L10 9 Z"/></svg>
+  <span class="line"></span>
+</div>
+
+<p class="intro">Cada producto se prepara en pocas cantidades, cuidando cada detalle desde el amasado hasta el último toque de decoración. Acá te mostramos una selección que va cambiando a lo largo del día — si querés ver todo lo que hacemos, el catálogo completo está a un clic.</p>
+
+<div class="featured-wrap" id="pasteleria">
+  <div class="featured-head">
+    <h2>Nuestra selección de hoy</h2>
+    <p class="note">✨ esta vidriera se renueva cada pocas horas — volvé a mirar más tarde</p>
+  </div>
+  <div class="cards" id="featured-cards"></div>
+</div>
+
+<div class="cta-wrap">
+  <button class="cta-btn" id="toggle-catalogo">Ver catálogo completo →</button>
+  <a class="cta-btn alt" href="https://wa.me/5491160520578?text=Hola!%20Quiero%20hacer%20un%20pedido" target="_blank" rel="noopener">Pedidos por WhatsApp</a>
+</div>
+
+<div class="catalogo">
+  <div class="catalogo-inner" id="catalogo-inner">
+    <div class="flourish" style="margin-top:10px;">
+      <span class="line"></span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 2 L14 9 L21 9 L15 13 L17 21 L12 16 L7 21 L9 13 L3 9 L10 9 Z"/></svg>
+      <span class="line"></span>
+    </div>
+    <h2>Catálogo completo</h2>
+    <p class="sub">Todo lo que preparamos en Tazón de Café</p>
+    <div id="catalog-groups"></div>
+  </div>
+</div>
+
+<div class="take-wrap" id="take-away">
+  <div class="flourish">
+    <span class="line"></span>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 2 L14 9 L21 9 L15 13 L17 21 L12 16 L7 21 L9 13 L3 9 L10 9 Z"/></svg>
+    <span class="line"></span>
+  </div>
+  <h2>Take Away</h2>
+  <p class="note">Retirá tu pedido en nuestro local</p>
+  <div class="take-grid">
+    <div class="take-info">
+      <p>Hacé tu pedido comunicándote al<br><a href="https://wa.me/5491160520578?text=Hola!%20Quiero%20hacer%20un%20pedido" target="_blank" rel="noopener">11-6052-0578</a></p>
+      <p>Retirá tu pedido en<br><span class="addr">García Fernández 456, Monte Grande</span><br>(entre calles Edison y 25 de Mayo, a una cuadra y media de Fernando de Toro)</p>
+      <p>Seguinos en Instagram<br><a href="https://www.instagram.com/tazondecafeglutenfree" target="_blank" rel="noopener">@tazondecafeglutenfree</a></p>
+    </div>
+    <div class="mapa">
+      <iframe src="https://www.google.com/maps?q=Garc%C3%ADa+Fern%C3%A1ndez+456,+Monte+Grande&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Ubicación de Tazón de Café"></iframe>
+    </div>
+  </div>
+</div>
+
+<div class="story-wrap" id="conoceme">
+  <div class="flourish">
+    <span class="line"></span>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 2 L14 9 L21 9 L15 13 L17 21 L12 16 L7 21 L9 13 L3 9 L10 9 Z"/></svg>
+    <span class="line"></span>
+  </div>
+  <h2>Conóceme</h2>
+  <p class="script hola" style="text-align:center;">¡Hola!</p>
+  <p>Soy Gisela, abogada de profesión que dejé de ejercer con el nacimiento de mi primer hijo, Facu. Por aquellos tiempos mi vida era maternar y probar cada receta dulce que veía en los programas de televisión. Tanto fue el amor por la pastelería que comencé a hacer cursos. Luego llegó mi segunda hija, Julia, y mi pasión por la pastelería siguió intacta.</p>
+  <p>Muchos años después decidí emprender en el maravilloso mundo de la pastelería sin gluten. ¿Mi desafío? Poder ofrecer pastelería linda a la vista y tan rica como la que lleva gluten.</p>
+  <p>Y así llegó Tazón de Café Gluten Free, nombre que recuerda aquel tazón de café que usaba mi papá para desayunar todas las madrugadas antes de irse a trabajar.</p>
+  <p>Fuimos creciendo paso a paso pero firmes, junto a mis dos hijos, quienes conforman este equipo. Los invito a disfrutar y deleitarse de esta pastelería 100% sin gluten.</p>
+  <p class="firma script">Gise, Facu y Julia</p>
+</div>
+
+<footer>
+  <span class="script">Gracias por endulzar tu día con nosotros</span>
+  <p>Pedidos y consultas — <a href="https://wa.me/5491160520578?text=Hola!%20Quiero%20hacer%20un%20pedido" target="_blank" rel="noopener">11-6052-0578</a></p>
+  <p>Retirá tu pedido en García Fernández 456, Monte Grande</p>
+  <p>Seguinos en Instagram — <a href="https://www.instagram.com/tazondecafeglutenfree" target="_blank" rel="noopener">@tazondecafeglutenfree</a></p>
+  <p class="small">Tazón de Café Gluten Free · repostería 100% sin TACC</p>
+</footer>
+
+<!-- Netlify Identity: solo se usa para procesar el enlace de invitación y llevar al panel /admin. No agrega ningún botón visible para el público. -->
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
+
+<script>
+/* ====== Catálogo de productos (se carga desde productos.json, editable vía /admin) ====== */
+const CATEGORY_ORDER = ["Tortas","Tartas","Box Celebración","Cuadrados 8x8 cm","Minicakes","Alfajores","Cookies","Panificados","Facturas"];
+
+/* ====== Utilidades de imagen ====== */
+function encodeFile(name){
+  return encodeURIComponent(String(name || '').replace(/^\/+/, ''));
+}
+function makeImg(file, alt){
+  const wrap = document.createElement('div');
+  wrap.className = 'imgbox';
+  const img = document.createElement('img');
+  img.loading = 'lazy';
+  img.alt = alt;
+  img.src = encodeFile(file);
+  img.onerror = function(){
+    wrap.innerHTML = '<div class="placeholder">Foto próximamente<br>(' + alt + ')</div>';
+  };
+  wrap.appendChild(img);
+  return wrap;
+}
+
+/* ====== Shuffle determinístico (mismo orden siempre, mezcla categorías) ====== */
+function mulberry32(seed){
+  return function(){
+    seed |= 0; seed = (seed + 0x6D2B79F5) | 0;
+    let t = Math.imul(seed ^ (seed >>> 15), 1 | seed);
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+}
+function seededShuffle(arr, seed){
+  const rnd = mulberry32(seed);
+  const copy = arr.slice();
+  for(let i = copy.length - 1; i > 0; i--){
+    const j = Math.floor(rnd() * (i + 1));
+    [copy[i], copy[j]] = [copy[j], copy[i]];
+  }
+  return copy;
+}
+
+/* ====== Rotación de la vidriera cada 2 horas ====== */
+const FEATURED_COUNT = 12;
+const ROTATE_HOURS = 2;
+const ROTATE_MS = ROTATE_HOURS * 60 * 60 * 1000;
+
+let productos = [];
+let vidriera = [];
+
+function getFeaturedNow(){
+  if(!vidriera.length) return [];
+  const block = Math.floor(Date.now() / ROTATE_MS);
+  const start = (block * FEATURED_COUNT) % vidriera.length;
+  const items = [];
+  for(let i = 0; i < FEATURED_COUNT; i++){
+    items.push(vidriera[(start + i) % vidriera.length]);
+  }
+  return items;
+}
+
+function renderFeatured(){
+  const wrap = document.getElementById('featured-cards');
+  wrap.innerHTML = '';
+  getFeaturedNow().forEach((p, idx) => {
+    const card = document.createElement('div');
+    card.className = 'card';
+    card.style.animationDelay = (idx * 0.07) + 's';
+    card.appendChild(makeImg(p.file, p.titulo));
+    const info = document.createElement('div');
+    info.className = 'info';
+    info.innerHTML = '<div class="cat">'+p.cat+'</div><h3>'+p.titulo+'</h3><p>'+p.desc+'</p>';
+    card.appendChild(info);
+    wrap.appendChild(card);
+  });
+}
+
+/* ====== Catálogo completo ====== */
+function renderCatalogo(){
+  const wrap = document.getElementById('catalog-groups');
+  wrap.innerHTML = '';
+  CATEGORY_ORDER.forEach(cat => {
+    const items = productos.filter(p => p.cat === cat);
+    if(!items.length) return;
+    const section = document.createElement('div');
+    section.className = 'cat-section';
+    const h3 = document.createElement('h3');
+    h3.textContent = cat;
+    section.appendChild(h3);
+    const grid = document.createElement('div');
+    grid.className = 'grid';
+    items.forEach(p => {
+      const mini = document.createElement('div');
+      mini.className = 'mini';
+      mini.appendChild(makeImg(p.file, p.titulo));
+      const info = document.createElement('div');
+      info.className = 'info';
+      info.innerHTML = '<h4>'+p.titulo+'</h4><p>'+p.desc+'</p>';
+      mini.appendChild(info);
+      grid.appendChild(mini);
+    });
+    section.appendChild(grid);
+    wrap.appendChild(section);
+  });
+}
+
+/* ====== Toggle catálogo completo ====== */
+const toggleBtn = document.getElementById('toggle-catalogo');
+const catalogoInner = document.getElementById('catalogo-inner');
+let catalogoBuilt = false;
+toggleBtn.addEventListener('click', () => {
+  if(!catalogoBuilt){ renderCatalogo(); catalogoBuilt = true; }
+  const isOpen = catalogoInner.classList.toggle('open');
+  toggleBtn.textContent = isOpen ? 'Ocultar catálogo ↑' : 'Ver catálogo completo →';
+  if(isOpen){ catalogoInner.scrollIntoView({behavior:'smooth', block:'start'}); }
+});
+
+/* ====== Carga de datos (productos.json) + init ====== */
+fetch('productos.json?v=' + Date.now())
+  .then(r => r.json())
+  .then(data => {
+    productos = data;
+    vidriera = seededShuffle(productos, 20260722);
+    renderFeatured();
+    if(catalogoBuilt){ renderCatalogo(); }
+    let lastBlock = Math.floor(Date.now() / ROTATE_MS);
+    setInterval(() => {
+      const block = Math.floor(Date.now() / ROTATE_MS);
+      if(block !== lastBlock){
+        lastBlock = block;
+        renderFeatured();
+      }
+    }, 5 * 60 * 1000);
+  })
+  .catch(err => {
+    document.getElementById('featured-cards').innerHTML = '<p style="text-align:center;color:var(--marron-suave);">No se pudieron cargar los productos. Volvé a intentar en unos minutos.</p>';
+    console.error('Error cargando productos.json', err);
+  });
+</script>
 </body>
 </html>
